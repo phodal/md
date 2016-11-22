@@ -74,6 +74,10 @@ textarea {
   background-color: #e6e6e6;
 }
 
+.hljs {
+  font-size: 10px;
+}
+
 @media (min-width: 768px) {
   body {
     font-size: 16px;

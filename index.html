@@ -7,10 +7,13 @@
   <link rel="stylesheet" href="css/normalize.css"/>
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="css/basic-ui.css"/>
+  <link rel="stylesheet" href="css/highlight.min.css"/>
   <link rel="stylesheet" href="css/github-light.css"/>
+  <script src="js/highlight.min.js"></script>
   <script src="js/showdown.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <script>
-    (function() {
+  (function() {
       var input, output;
       var converter = new showdown.Converter();
 
@@ -34,7 +37,34 @@
 <div class="row cf">
   <div class="col">
     <h2>Markdown</h2>
-    <textarea id="input" cols="100" rows="10"></textarea>
+    <textarea id="input" cols="100" rows="10"># mdpub
+
+Inspired by [to-markdown](https://github.com/domchristie/to-markdown)
+
+
+A Markdown Editor for Wechat Public
+
+```javascript
+(function() {
+      var input, output;
+      var converter = new showdown.Converter();
+
+      function updateOutput() {
+          output.innerHTML = converter.makeHtml(input.value);
+      }
+
+      document.addEventListener("DOMContentLoaded", function(event) {
+        input = document.getElementById('input');
+        output = document.getElementById('output');
+
+        input.addEventListener('input', updateOutput, false);
+        input.addEventListener('keydown', updateOutput, false);
+
+        updateOutput();
+      });
+    })();
+```
+</textarea>
   </div>
 
   <div class="col">
