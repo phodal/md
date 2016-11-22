@@ -1,182 +1,53 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1">
-<title>Markdown Wechat Public</title>
-<link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
-<link rel="stylesheet" href="css/basic-ui.css" />
-<link rel="stylesheet" href="css/github-light.css" />
-<style>
-  .cf:before,
-  .cf:after {
-      content: " ";
-      display: table;
-  }
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1">
+  <title>Markdown Wechat Public</title>
+  <link rel="stylesheet" href="css/normalize.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/basic-ui.css"/>
+  <link rel="stylesheet" href="css/github-light.css"/>
+  <script src="js/showdown.min.js"></script>
+  <script>
+    (function() {
+      var input, output;
+      var converter = new showdown.Converter();
 
-  .cf:after {
-      clear: both;
-  }
+      function updateOutput() {
+          output.innerHTML = converter.makeHtml(input.value);
+      }
 
-  .cf {
-      *zoom: 1;
-  }
+      document.addEventListener("DOMContentLoaded", function(event) {
+        input = document.getElementById('input');
+        output = document.getElementById('output');
 
-  * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+        input.addEventListener('input', updateOutput, false);
+        input.addEventListener('keydown', updateOutput, false);
 
-  body {
-    background-color: #ccc;
-    margin: 0 auto;
-    font-size: 14px;
-    font-family: sans-serif;
-    line-height: 1.4;
-    color: #333;
-  }
-
-  header {
-    padding: 1em;
-    overflow: hidden;
-    background-color: #fff;
-  }
-
-  footer {
-    text-align: center;
-    color: #666;
-    text-shadow: 0 1px 0 #ddd;
-  }
-
-  a,
-  a:visited {
-    font-weight: 700;
-    color: #4A90E2;
-    text-decoration: none;
-  }
-
-  h1 {
-    float: left;
-    margin: 0;
-    font-size: 1em;
-  }
-
-  h2 {
-    color: #fff;
-    margin-bottom: 0;
-  }
-
-  .col {
-    padding: 0 10px;
-  }
-
-  textarea {
-    width: 100%;
-    height: 600px;
-    margin: 0;
-    padding: .5em;
-    overflow: auto;
-    border: none;
-    background-color: #fff;
-    font-family: courier, monospace;
-    font-size: inherit;
-    color: inherit;
-  }
-
-  #input {
-    background: #333;
-    color: #fff;
-  }
-
-  .toolbar {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: #e6e6e6;
-  }
-
-  @media (min-width: 768px) {
-    body {
-      font-size: 16px;
-    }
-
-    .col {
-      float: left;
-      width: 50%;
-      padding: 0 15px;
-    }
-
-    .row {
-      padding-right: 15px;
-      padding-left: 15px;
-    }
-  }
-</style>
-<script src="bower_components/to-markdown/dist/to-markdown.js"></script>
-<script>
-(function () {
-  var input, output, gfm;
-
-  function updateOutput() {
-    output.value = toMarkdown(input.value, { gfm: gfm.checked });
-  }
-
-  document.addEventListener("DOMContentLoaded", function(event) {
-    input = document.getElementById('input');
-    output = document.getElementById('output');
-    gfm = document.getElementById('gfm');
-
-    input.addEventListener('input', updateOutput, false);
-    input.addEventListener('keydown', updateOutput, false);
-
-    gfm.addEventListener('change', updateOutput, false);
-
-    updateOutput();
-  });
-})();
-</script>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-26662448-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+        updateOutput();
+      });
+    })();
+  </script>
 </head>
 <body>
-  <div class="row cf toolbar">
-    <div class="col">
-      <label><input type="checkbox" id="gfm"> GitHub Flavored Markdown</label>
-    </div>
+<div class="row cf">
+  <div class="col">
+    <h2>Markdown</h2>
+    <textarea id="input" cols="100" rows="10"># mdpub
+
+Inspired by [to-markdown](https://github.com/domchristie/to-markdown)
+
+
+A Markdown Editor for Wechat Public
+
+    </textarea>
   </div>
-  <div class="row cf">
-    <div class="col">
-      <h2>HTML</h2>
-      <textarea id="input" cols="100" rows="10"><h3>Some HTML</h3>
 
-<p>Hello world! This demonstrates <a href="https://github.com/domchristie/to-markdown">to-markdown</a> – an HTML to Markdown converter.</p>
-
-<hr />
-
-<ol>
-  <li>Number 1</li>
-  <li>Number Two</li>
-</ol></textarea>
-    </div>
-
-    <div class="col">
-      <h2>Markdown</h2>
-      <textarea readonly id="output"></textarea>
-    </div>
+  <div class="col">
+    <h2>Layout</h2>
+    <textarea readonly id="output"></textarea>
   </div>
-  <footer>
-    <p>Based on to-markdown is copyright &copy; 2011-15 <a href="http://domchristie.co.uk">Dom Christie</a> and is released under the MIT licence.</p>
-  </footer>
+</div>
 </body>
 </html>
