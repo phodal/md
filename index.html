@@ -9,16 +9,19 @@
   <link rel="stylesheet" href="css/basic-ui.css"/>
   <link rel="stylesheet" href="css/highlight.min.css"/>
   <link rel="stylesheet" href="css/github-light.css"/>
-  <link rel="stylesheet" href="css/buttons.css"/>
-  <script src="js/highlight.min.js"></script>
+
   <script src="js/showdown.min.js"></script>
+  <script src="js/showdown-plugins/showdown-prettify.min.js"></script>
   <script src="js/jquery-3.1.1.js"></script>
   <script src="js/clipboard.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
+
+  <link rel="stylesheet" href="google-code-prettify/prettify.css"/>
+  <script src="google-code-prettify/run_prettify.js"></script>
+  <link rel="stylesheet" href="themes/tomorrow-night.css"/>
   <script>
     (function () {
       var input, output;
-      var converter = new showdown.Converter();
+      var converter = new showdown.Converter({extensions: ['prettify']});
 
       function updateOutput() {
         output.innerHTML = converter.makeHtml(input.value);
