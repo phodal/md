@@ -11,17 +11,19 @@
   <link rel="stylesheet" href="css/github-light.css"/>
   <script src="js/highlight.min.js"></script>
   <script src="js/showdown.min.js"></script>
+  <script src="js/jquery-3.1.1.js"></script>
+  <script src="js/clipboard.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <script>
-  (function() {
+    (function () {
       var input, output;
       var converter = new showdown.Converter();
 
       function updateOutput() {
-          output.innerHTML = converter.makeHtml(input.value);
+        output.innerHTML = converter.makeHtml(input.value);
       }
 
-      document.addEventListener("DOMContentLoaded", function(event) {
+      document.addEventListener("DOMContentLoaded", function (event) {
         input = document.getElementById('input');
         output = document.getElementById('output');
 
@@ -31,6 +33,9 @@
         updateOutput();
       });
     })();
+    $('document').ready(function () {
+      new Clipboard('.btn');
+    });
   </script>
 </head>
 <body>
@@ -71,7 +76,9 @@ A Markdown Editor for Wechat Public
   </div>
 
   <div class="col">
-    <h2>结果</h2>
+    <h2>
+      <button class="btn" data-clipboard-action="cut" data-clipboard-target="#output">Cut to clipboard</button>
+    </h2>
     <div id="output"></div>
   </div>
 </div>
