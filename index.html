@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/basic-ui.css"/>
   <link rel="stylesheet" href="css/highlight.min.css"/>
   <link rel="stylesheet" href="css/github-light.css"/>
+  <link rel="stylesheet" href="css/buttons.css"/>
   <script src="js/highlight.min.js"></script>
   <script src="js/showdown.min.js"></script>
   <script src="js/jquery-3.1.1.js"></script>
@@ -41,7 +42,9 @@
 <body>
 <div class="row cf">
   <div class="col">
-    <h2>Markdown</h2>
+    <div class="header">
+      <h2>Markdown</h2>
+    </div>
     <textarea id="input" cols="100" rows="10"># 公众号 Phodal 专用编辑器
 
 > Inspired by [to-markdown](https://github.com/domchristie/to-markdown)
@@ -76,9 +79,9 @@ A Markdown Editor for Wechat Public
   </div>
 
   <div class="col">
-    <h2>
-      <button class="btn" data-clipboard-action="cut" data-clipboard-target="#output">Cut to clipboard</button>
-    </h2>
+    <div class="header">
+      <button class="btn button" data-clipboard-action="cut" data-clipboard-target="#output">复制</button>
+    </div>
     <div id="output"></div>
   </div>
 </div>

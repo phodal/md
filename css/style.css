@@ -20,7 +20,7 @@
 }
 
 body {
-  background-color: #ccc;
+  background-color: #eee;
   margin: 0 auto;
   font-size: 14px;
   font-family: sans-serif;
@@ -69,6 +69,10 @@ textarea {
   padding: 1em;
 }
 
+#input, #output {
+  border-radius: 3px;
+}
+
 .toolbar {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -94,4 +98,28 @@ textarea {
     padding-right: 15px;
     padding-left: 15px;
   }
+}
+
+.header {
+  height: 80px;
+  line-height: 80px;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.header button {
+  border-radius: 3px;
+  margin-top: 15px;
+  line-height: 30px;
+  background-color: #4CAF50;
+  color: #fff;
 }
