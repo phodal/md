@@ -1,0 +1,7 @@
+.prettyprint {
+  font-family: Consolas, Menlo, Courier, monospace;
+}
+
+.prettyprint pre p {
+  min-height: 10px;
+}
