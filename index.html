@@ -28,6 +28,7 @@
 
       function updateOutput() {
         output.innerHTML = converter.makeHtml(input.value);
+        PR.prettyPrint();
       }
 
       document.addEventListener("DOMContentLoaded", function (event) {
