@@ -36,53 +36,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-    margin-bottom: 1em;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
-code {
-    padding: 2px 4px;
-    font-family: Consolas, Menlo, Courier, monospace;
-    font-size: 0.9rem;
-    color: #383e41;
-    background-color: #f3f6fa;
-    border-radius: 0.3rem;
+pre p {
+  margin: 0;
 }
 
-pre {
-    padding: 0.8rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font: 1rem Consolas, Menlo, Courier, monospace;
-    color: #567482;
-    word-wrap: normal;
-}
-
-pre > code {
-    padding: 0;
-    margin: 0;
-    font-size: 0.9rem;
-    color: #567482;
-    word-break: normal;
-    white-space: pre;
-    background: transparent;
-    border: 0;
-}
-
-.highlight {
-    margin-bottom: 1rem;
-}
-
-.highlight pre {
-    margin-bottom: 0;
-    word-break: normal;
-}
-
-.highlight pre, pre {
-    padding: 0.8rem;
-    overflow: auto;
-    font-size: 0.9rem;
-    line-height: 1.45;
-    border-radius: 0.3rem;
+pre ol {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 pre code, pre tt {
