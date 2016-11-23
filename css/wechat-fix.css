@@ -5,3 +5,34 @@
 .prettyprint pre p {
   min-height: 10px;
 }
+
+/*#output h2:after {*/
+  /*border-bottom: 4px;*/
+  /*border-left-width: 60px;*/
+  /*border-left-style: solid;*/
+  /*border-left-color: rgb(26, 149, 165);*/
+  /*background: rgb(38, 198, 218);*/
+  /*height: 4px;*/
+/*}*/
+
+h3#headline {
+  color: #444;
+  margin: 0;
+  padding: 11px 0px 5px 0px;
+  font-size: 11px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+h2#headline {
+  color: #444;
+  margin: 0;
+  padding: 0px 0px 6px 0px;
+  font-size: 51px;
+  line-height: 44px;
+  letter-spacing: -2px;
+  font-weight: bold;
+  text-transform: none;
+}
