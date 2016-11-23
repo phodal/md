@@ -123,3 +123,8 @@ textarea {
   background-color: #4CAF50;
   color: #fff;
 }
+
+ol.linenums li {
+  font-size: 10px;
+  line-height: 12px;
+}
