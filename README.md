@@ -6,6 +6,13 @@ Demo: [https://phodal.github.io/mdpub/](https://phodal.github.io/mdpub/)
 
 Inspired by [to-markdown](https://github.com/domchristie/to-markdown) - A Convert from html to markdown
 
+基于：
+
+ - Markdown Render: [Showdown.js](https://github.com/showdownjs/showdown)
+ - Code HighLight: [Code Prettify](https://github.com/google/code-prettify)
+ - Copy: [Clipboard.js](https://github.com/zenorocha/clipboard.js/)
+ - Themes: [Color themes for Google Code Prettify](https://github.com/jmblog/color-themes-for-google-code-prettify)
+
 LICENSE
 ---
 
