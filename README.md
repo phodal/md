@@ -2,7 +2,7 @@
 
 > A Simple & Beautify Online Markdown Converter
 
-Demo: [https://phodal.github.io/mdpub/](https://phodal.github.io/mdpub/)
+Demo: [我的第四款编辑器：微信公众号上使用 Markdown 来显示代码](http://mp.weixin.qq.com/s?__biz=MjM5Mjg4NDMwMA==&mid=2652974328&idx=1&sn=3f012c47d7feacc6cabc23965430963f&chksm=bd4affdb8a3d76cdd287d511f5e1757820915d42f85a8652b2cb9d346ebf7d1a233f43cb606f#rd)
 
 Inspired by [to-markdown](https://github.com/domchristie/to-markdown) - A Convert from html to markdown
 
