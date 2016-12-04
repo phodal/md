@@ -18,11 +18,19 @@
     return [{
       type:   'output',
       filter: function (source) {
-        return source.replace(/<li>\[ \] (.*)<\/li>/gi, function (match, pre) {
+        source = source.replace(/<li>\[ \] (.*)<\/li>/gi, function (match, pre) {
           if(pre){
             return '<li class="task-list-item-checkbox">' + pre + '</li>'  ;
           }
         });
+
+        source = source.replace(/<li>\[x] (.*)<\/li>/gi, function (match, pre) {
+          if(pre){
+            return '<li class="task-list-item-checkbox checked"><del>' + pre + '</del></li>'  ;
+          }
+        });
+
+        return source;
       }
     }];
   });
