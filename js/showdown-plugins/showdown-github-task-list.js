@@ -20,13 +20,13 @@
       filter: function (source) {
         source = source.replace(/<li>\[ \] (.*)<\/li>/gi, function (match, pre) {
           if(pre){
-            return '<li class="task-list-item-checkbox">' + pre + '</li>'  ;
+            return '<li><span class="task-list-item-checkbox"></span>' + pre + '</li>'  ;
           }
         });
 
         source = source.replace(/<li>\[x] (.*)<\/li>/gi, function (match, pre) {
           if(pre){
-            return '<li class="task-list-item-checkbox checked"><del>' + pre + '</del></li>'  ;
+            return '<li><span class="task-list-item-checkbox checked"></span>' + pre + '</li>'  ;
           }
         });
 
