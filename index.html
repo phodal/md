@@ -13,6 +13,7 @@
 
   <script src="js/showdown.min.js"></script>
   <script src="js/showdown-plugins/showdown-prettify-for-wechat.js"></script>
+  <script src="js/showdown-plugins/showdown-github-task-list.js"></script>
   <script src="js/jquery-3.1.1.js"></script>
   <script src="js/clipboard.min.js"></script>
 
@@ -24,7 +25,7 @@
   <script>
     (function () {
       var input, output;
-      var converter = new showdown.Converter({extensions: ['prettify']});
+      var converter = new showdown.Converter({extensions: ['prettify', 'tasklist']});
 
       function updateOutput() {
         output.innerHTML = converter.makeHtml(input.value);
