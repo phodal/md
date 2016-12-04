@@ -83,6 +83,15 @@ textarea {
   font-size: 10px;
 }
 
+code.code-in-text.prettyprint {
+  padding: 2px 7px;
+  border-radius: 2px;
+}
+
+code.code-in-text span {
+  color: #30ea30;
+}
+
 @media (min-width: 768px) {
   body {
     font-size: 16px;
