@@ -39,9 +39,9 @@ ul li.task-list-list {
   top: 4px;
   right: 8px;
   position: relative;
-  background-image: url("../imgs/uncheck.png");
+  background-image: url("https://phodal.github.io/mdpub/imgs/uncheck.png");
 }
 
 .task-list-item-checkbox.checked {
-  background-image: url("../imgs/checked.png");
+  background-image: url("https://phodal.github.io/mdpub/imgs/checked.png");
 }
