@@ -1,12 +1,17 @@
 # MDPub
 
-> A Simple & Beautify Online Markdown Converter
+> A Simple & Beautify Online Markdown Converter for Wechat Public
 
-Demo: [我的第四款编辑器：微信公众号上使用 Markdown 来显示代码](http://mp.weixin.qq.com/s?__biz=MjM5Mjg4NDMwMA==&mid=2652974328&idx=1&sn=3f012c47d7feacc6cabc23965430963f&chksm=bd4affdb8a3d76cdd287d511f5e1757820915d42f85a8652b2cb9d346ebf7d1a233f43cb606f#rd)
+Demo: [http://md.phodal.com/](http://md.phodal.com/)
 
 Inspired by [to-markdown](https://github.com/domchristie/to-markdown) - A Convert from html to markdown
 
-基于：
+特别功能:
+
+ - 完美代码高亮。在微信公众号上使用小字体、语法高亮来显示代码
+ - 支持 TodoList 语法。
+
+Base on：
 
  - Markdown Render: [Showdown.js](https://github.com/showdownjs/showdown)
  - Code HighLight: [Code Prettify](https://github.com/google/code-prettify)
