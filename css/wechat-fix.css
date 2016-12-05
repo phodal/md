@@ -19,6 +19,7 @@ ul li.task-list-list {
   margin: 0;
   padding: 0;
 }
+
 .task-list-list.checked {
   color: #159957;
 }
@@ -44,4 +45,19 @@ ul li.task-list-list {
 
 .task-list-item-checkbox.checked {
   background-image: url(https://phodal.github.io/mdpub/imgs/checked.png);
+}
+
+h2.super {
+  white-space: normal;
+  border: none;
+  margin: 5px 0 0;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 20px;
+  border-left-width: 48px;
+  border-left-style: solid;
+  border-radius: 4px;
+  color: #fff;
+  border-left-color: #bfc1bf;
+  background-color: #159957;
 }
