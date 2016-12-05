@@ -18,8 +18,11 @@ Base on：
  - Copy: [Clipboard.js](https://github.com/zenorocha/clipboard.js/)
  - Themes: [Color themes for Google Code Prettify](https://github.com/jmblog/color-themes-for-google-code-prettify)
 
-Font-Awesome to SVG: [http://fa2png.io/](http://fa2png.io/)
+Resources:
 
+ - Font-Awesome to SVG: [http://fa2png.io/](http://fa2png.io/)
+ - [中国传统色彩](http://ylbook.com/cms/web/chuantongsecai/chuantongsecai.htm)
+ 
 Inspired by [to-markdown](https://github.com/domchristie/to-markdown) - A Convert from html to markdown
 
 LICENSE

@@ -49,17 +49,66 @@ table tr:nth-child(2n) {
   position: relative;
 }
 
+.super {
+
+}
+
+h1.super {
+  white-space: normal;
+  border: none;
+  margin: 5px 0 0;
+  padding: 10px;
+  font-size: 24px;
+  line-height: 20px;
+  border-left-width: 6px;
+  border-left-style: solid;
+  border-radius: 3px;
+  color: #FFFBF0;
+  border-left-color: #30DFF3;
+  background-color: #4B5CC4;
+}
+
 h2.super {
+  white-space: normal;
+  border: none;
+  margin: 5px 0 0;
+  padding: 10px;
+  font-size: 20px;
+  line-height: 20px;
+  border-left-width: 6px;
+  border-left-style: solid;
+  border-radius: 3px;
+  color: #FFFBF0;
+  border-left-color: #30DFF3;
+  background-color: #4B5CC4;
+}
+
+h3.super {
   white-space: normal;
   border: none;
   margin: 5px 0 0;
   padding: 10px;
   font-size: 18px;
   line-height: 20px;
-  border-left-width: 48px;
+  border-left-width: 12px;
   border-left-style: solid;
-  border-radius: 4px;
-  color: #fff;
-  border-left-color: #bfc1bf;
-  background-color: #159957;
+  border-radius: 3px;
+  color: #FFFBF0;
+  border-left-color: #30DFF3;
+  background-color: #4B5CC4;
+}
+
+h4.super {
+  white-space: normal;
+  border: none;
+  margin: 5px 0 0;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  border-left-width: 24px;
+  border-left-style: solid;
+  border-radius: 3px;
+  color: #FFFBF0;
+  border-left-color: #30DFF3;
+  background-color: #4B5CC4;
 }
