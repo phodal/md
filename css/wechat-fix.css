@@ -28,23 +28,12 @@ ul li.task-list-list {
   color: #bfc1bf;
 }
 
-.task-list-item-checkbox {
-  display: inline-block;
-  width: 20px;
+.task-list-list img {
   height: 20px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  -webkit-appearance: none;
-  outline: 0;
+  width: 20px;
+  margin: 0 10px;
   top: 4px;
-  right: 8px;
   position: relative;
-  background-image: url(https://phodal.github.io/mdpub/imgs/uncheck.png);
-}
-
-.task-list-item-checkbox.checked {
-  background-image: url(https://phodal.github.io/mdpub/imgs/checked.png);
 }
 
 h2.super {

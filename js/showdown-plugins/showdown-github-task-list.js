@@ -20,13 +20,13 @@
       filter: function (source) {
         source = source.replace(/<li>\[ \] (.*)<\/li>/gi, function (match, pre) {
           if(pre){
-            return '<p class="task-list-list uncheck" style="list-style-type: none;"><span class="task-list-item-checkbox uncheck"></span><span>' + pre + '</span></p>'  ;
+            return '<p class="task-list-list uncheck" style="list-style-type: none;"><img src="http://md.phodal.com/imgs/uncheck.png" width="20" height="20"/><span>' + pre + '</span></p>'  ;
           }
         });
 
         source = source.replace(/<li>\[x] (.*)<\/li>/gi, function (match, pre) {
           if(pre){
-            return '<p class="task-list-list checked" style="list-style-type: none;"><span class="task-list-item-checkbox checked"></span>' + pre + '</p>'  ;
+            return '<p class="task-list-list checked" style="list-style-type: none;"><img src="http://md.phodal.com/imgs/checked.png" width="20" height="20"/>' + pre + '</p>'  ;
           }
         });
 
