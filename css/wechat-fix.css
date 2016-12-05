@@ -24,6 +24,15 @@ ul {
   padding: 0;
 }
 
+table {
+  display: table;
+  width: 100%;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
 .task-list-list.checked {
   color: #159957;
 }
