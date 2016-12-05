@@ -2,9 +2,9 @@
 
 > A Simple & Beautify Online Markdown Converter for Wechat Public
 
-Demo: [http://md.phodal.com/](http://md.phodal.com/)
+在线使用: [http://md.phodal.com/](http://md.phodal.com/)
 
-Inspired by [to-markdown](https://github.com/domchristie/to-markdown) - A Convert from html to markdown
+示例: [我的第四款编辑器：微信公众号上使用 Markdown 来显示代码](http://mp.weixin.qq.com/s?__biz=MjM5Mjg4NDMwMA==&mid=2652974328&idx=1&sn=3f012c47d7feacc6cabc23965430963f&chksm=bd4affdb8a3d76cdd287d511f5e1757820915d42f85a8652b2cb9d346ebf7d1a233f43cb606f#rd)
 
 特别功能:
 
@@ -19,6 +19,8 @@ Base on：
  - Themes: [Color themes for Google Code Prettify](https://github.com/jmblog/color-themes-for-google-code-prettify)
 
 Font-Awesome to SVG: [http://fa2png.io/](http://fa2png.io/)
+
+Inspired by [to-markdown](https://github.com/domchristie/to-markdown) - A Convert from html to markdown
 
 LICENSE
 ---
