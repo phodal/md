@@ -15,6 +15,10 @@ ul li.task-list-list {
   padding: 0 10px;
 }
 
+ul {
+  padding-left: 10px;
+}
+
 .task-list-list {
   margin: 0;
   padding: 0;
