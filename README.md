@@ -13,6 +13,8 @@ Inspired by [to-markdown](https://github.com/domchristie/to-markdown) - A Conver
  - Copy: [Clipboard.js](https://github.com/zenorocha/clipboard.js/)
  - Themes: [Color themes for Google Code Prettify](https://github.com/jmblog/color-themes-for-google-code-prettify)
 
+Font-Awesome to SVG: [http://fa2png.io/](http://fa2png.io/)
+
 LICENSE
 ---
 
