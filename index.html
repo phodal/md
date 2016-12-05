@@ -25,7 +25,7 @@
   <script>
     (function () {
       var input, output;
-      var converter = new showdown.Converter({extensions: ['prettify', 'tasklist']});
+      var converter = new showdown.Converter({extensions: ['prettify', 'tasklist'], tables: true});
 
       function updateOutput() {
         output.innerHTML = converter.makeHtml(input.value);
@@ -75,6 +75,10 @@
 - Showdown.js
 - Clipboard
 
+| h1    |    h2   |      h3 |
+|-------|---------|---------|
+| 100   | [a][1]  | ![b][2] |
+| *foo* | **bar** | ~~baz~~ |
 
 ### Special
 
