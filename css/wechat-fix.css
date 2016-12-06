@@ -75,7 +75,7 @@ h2.super {
   padding: 10px;
   font-size: 20px;
   line-height: 20px;
-  border-left-width: 6px;
+  border-left-width: 12px;
   border-left-style: solid;
   border-radius: 3px;
   color: #FFFBF0;
@@ -90,7 +90,7 @@ h3.super {
   padding: 10px;
   font-size: 18px;
   line-height: 20px;
-  border-left-width: 12px;
+  border-left-width: 18px;
   border-left-style: solid;
   border-radius: 3px;
   color: #FFFBF0;
