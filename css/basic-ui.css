@@ -44,9 +44,17 @@ pre p {
   margin: 0;
 }
 
+ul, ol {
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+}
+
+pre ul,
 pre ol {
-  padding-top: 12px;
-  padding-bottom: 12px;
+    margin: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 pre code, pre tt {
