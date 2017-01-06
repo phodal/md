@@ -114,3 +114,15 @@ h4.super {
   border-left-color: #30DFF3;
   background-color: #4B5CC4;
 }
+
+ruby {
+  background-color: rgba(67, 193, 105, 0.5);
+  margin: 4px;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+ruby rt {
+  font-style: italic;
+  background-color: rgba(67, 193, 105, 0.2);
+}
