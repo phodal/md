@@ -1,4 +1,3 @@
-/*! showdown-prettify 06-01-2016 */
 (function (extension) {
   'use strict';
 
