@@ -44,12 +44,6 @@ pre p {
   margin: 0;
 }
 
-ul, ol {
-    margin: 0;
-    padding: 0;
-    padding-left: 40px;
-}
-
 pre ul,
 pre ol {
     margin: 0;
