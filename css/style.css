@@ -89,7 +89,7 @@ code.code-in-text.prettyprint {
 }
 
 code.code-in-text span {
-  color: #30ea30;
+  color: #179ED6;
 }
 
 @media (min-width: 768px) {
@@ -115,7 +115,7 @@ code.code-in-text span {
 }
 
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #179ED6; /* Green */
   border: none;
   color: white;
   padding: 5px 30px;
@@ -129,6 +129,6 @@ code.code-in-text span {
   border-radius: 3px;
   margin-top: 15px;
   line-height: 30px;
-  background-color: #4CAF50;
+  background-color: #179ED6;
   color: #fff;
 }
