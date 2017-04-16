@@ -126,3 +126,7 @@ ruby rt {
   font-style: italic;
   background-color: rgba(67, 193, 105, 0.2);
 }
+
+figcaption {
+  text-align: center;
+}
