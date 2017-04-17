@@ -16,6 +16,7 @@
   <script src="js/showdown-plugins/showdown-github-task-list.js"></script>
   <script src="js/showdown-plugins/showdown-footnote.js"></script>
   <script src="js/showdown-plugins/showdown-figure.js"></script>
+  <script src="js/showdown-plugins/showdown-toc.js"></script>
   <script src="js/jquery-3.1.1.js"></script>
   <script src="js/clipboard.min.js"></script>
 
@@ -27,7 +28,7 @@
   <script>
     (function () {
       var input, output;
-      var converter = new showdown.Converter({extensions: ['prettify', 'tasklist', 'footnote', 'figure'], tables: true});
+      var converter = new showdown.Converter({extensions: ['prettify', 'tasklist', 'footnote', 'figure', 'toc'], tables: true});
 
       function updateOutput() {
         output.innerHTML = converter.makeHtml(input.value);
@@ -62,6 +63,10 @@ GitHub 地址：[https://github.com/phodal/mdpub](https://github.com/phodal/mdpu
 更多精彩内容请<ruby>关注<rt>扫码</rt></ruby>：
 
 ![图注：Phodal's Wechat](http://articles.phodal.com/qrcode.jpg)
+
+### 目录示例：
+
+[toc]
 
 ### 一些示例
 
