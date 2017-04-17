@@ -49,6 +49,7 @@ table tr:nth-child(2n) {
   margin: 0 10px;
   top: 4px;
   position: relative;
+  display: inline-block;
 }
 
 .super {
