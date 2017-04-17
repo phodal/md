@@ -130,3 +130,8 @@ ruby rt {
 figcaption {
   text-align: center;
 }
+
+img {
+  margin: 0 auto;
+  display: block;
+}
