@@ -1,3 +1,7 @@
+// Author: Tomás Correia Marques
+// GitHub: https://github.com/tomasmcm/figure-extension
+//
+
 (function (extension) {
   'use strict';
 
