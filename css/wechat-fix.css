@@ -130,6 +130,8 @@ ruby rt {
 
 figcaption {
   text-align: center;
+  font-size: 12px;
+  color: #ccc;
 }
 
 img {
