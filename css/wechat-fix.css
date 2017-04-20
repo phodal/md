@@ -131,6 +131,7 @@ ruby rt {
 figcaption {
   text-align: center;
   font-size: 12px;
+  padding: 8px;
   color: #ccc;
 }
 
