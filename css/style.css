@@ -132,3 +132,7 @@ code.code-in-text span {
   background-color: #179ED6;
   color: #fff;
 }
+
+.header h2 {
+  padding: 0;
+} 
