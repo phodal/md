@@ -1,6 +1,6 @@
 # MD
 
-> A Simple & Beautify Online Markdown Converter for Wechat Public
+> A Simple & Beautify Online Markdown Converter for Wechat Media Platform
 
 在线使用: [http://md.phodal.com/](http://md.phodal.com/)
 
