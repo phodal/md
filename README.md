@@ -4,6 +4,8 @@
 
 > A Simple & Beautify Online Markdown Converter for Wechat Media Platform
 
+UI based on [Mifa Design](https://github.com/phodal/mifa) 
+
 在线使用: [http://md.phodal.com/](http://md.phodal.com/)
 
 html 转 markdown: [https://github.com/phodal/2md](https://github.com/phodal/2md)
