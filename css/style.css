@@ -100,7 +100,6 @@ code.code-in-text span {
   .col {
     float: left;
     width: 50%;
-    padding: 0 15px;
   }
 
   .row {
@@ -135,4 +134,9 @@ code.code-in-text span {
 
 .header h2 {
   padding: 0;
-} 
+  line-height: 80px;
+}
+
+textarea#input {
+  height: 100%;
+}

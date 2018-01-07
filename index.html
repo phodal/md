@@ -4,12 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1">
   <title>MDPUB: Markdown Editor for Wechat Media Platform</title>
-  <link rel="stylesheet" href="css/custom-ui.css"/>
   <link rel="stylesheet" href="css/normalize.css"/>
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="css/basic-ui.css"/>
   <link rel="stylesheet" href="css/highlight.min.css"/>
-  <link rel="stylesheet" href="css/github-light.css"/>
 
   <script src="js/showdown.min.js"></script>
   <script src="js/showdown-plugins/showdown-prettify-for-wechat.js"></script>
@@ -22,8 +20,9 @@
 
   <link rel="stylesheet" href="google-code-prettify/prettify.css"/>
   <script src="google-code-prettify/run_prettify.js"></script>
-  <link rel="stylesheet" href="themes/tomorrow-night-eighties.css"/>
+  <link rel="stylesheet" href="themes/tomorrow.css"/>
 
+  <link rel="stylesheet" href="css/mifa.css"/>
   <link rel="stylesheet" href="css/wechat-fix.css"/>
   <script>
     (function () {
@@ -76,23 +75,23 @@ GitHub 地址：[https://github.com/phodal/mdpub](https://github.com/phodal/mdpu
 
 ```javascript
 (function() {
-      var input, output;
-      var converter = new showdown.Converter();
+  var input, output;
+  var converter = new showdown.Converter();
 
-      function updateOutput() {
-          output.innerHTML = converter.makeHtml(input.value);
-      }
+  function updateOutput() {
+      output.innerHTML = converter.makeHtml(input.value);
+  }
 
-      document.addEventListener("DOMContentLoaded", function(event) {
-        input = document.getElementById('input');
-        output = document.getElementById('output');
+  document.addEventListener("DOMContentLoaded", function(event) {
+    input = document.getElementById('input');
+    output = document.getElementById('output');
 
-        input.addEventListener('input', updateOutput, false);
-        input.addEventListener('keydown', updateOutput, false);
+    input.addEventListener('input', updateOutput, false);
+    input.addEventListener('keydown', updateOutput, false);
 
-        updateOutput();
-      });
-    })();
+    updateOutput();
+  });
+})();
 ```
 
 ```

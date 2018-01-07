@@ -1,50 +1,3 @@
-h1, h2, h3, h4, h5, h6 {
-  padding: 2em 0 1em 0;
-}
-
-h1 {
-  font-size: 24px;
-}
-
-h2 {
-  font-size: 20px;
-}
-
-h3 {
-  font-size: 18px;
-}
-
-h4 {
-  font-size: 16px;
-}
-
-.prettyprint {
-  font-family: Consolas, Menlo, Courier, monospace;
-}
-
-.prettyprint pre p {
-  min-height: 10px;
-}
-
-#list1 ul {
-  padding-left: 10px;
-}
-
-ul li.task-list-list {
-  list-style-type: none;;
-  padding: 0 10px;
-}
-
-ul, ol {
-  margin: 0;
-  padding: 0;
-  padding-left: 40px;
-}
-
-.task-list-list {
-  margin: 0;
-  padding: 0;
-}
 
 table {
   display: table;
@@ -72,69 +25,6 @@ table tr:nth-child(2n) {
   display: inline-block;
 }
 
-.super {
-
-}
-
-h1.super {
-  white-space: normal;
-  border: none;
-  margin: 5px 0 0;
-  padding: 10px;
-  font-size: 24px;
-  line-height: 20px;
-  border-left-width: 6px;
-  border-left-style: solid;
-  border-radius: 3px;
-  color: #FFFBF0;
-  border-left-color: #30DFF3;
-  background-color: #4B5CC4;
-}
-
-h2.super {
-  white-space: normal;
-  border: none;
-  margin: 5px 0 0;
-  padding: 10px;
-  font-size: 20px;
-  line-height: 20px;
-  border-left-width: 12px;
-  border-left-style: solid;
-  border-radius: 3px;
-  color: #FFFBF0;
-  border-left-color: #30DFF3;
-  background-color: #4B5CC4;
-}
-
-h3.super {
-  white-space: normal;
-  border: none;
-  margin: 5px 0 0;
-  padding: 10px;
-  font-size: 18px;
-  line-height: 20px;
-  border-left-width: 18px;
-  border-left-style: solid;
-  border-radius: 3px;
-  color: #FFFBF0;
-  border-left-color: #30DFF3;
-  background-color: #4B5CC4;
-}
-
-h4.super {
-  white-space: normal;
-  border: none;
-  margin: 5px 0 0;
-  padding: 10px;
-  font-size: 16px;
-  line-height: 20px;
-  border-left-width: 24px;
-  border-left-style: solid;
-  border-radius: 3px;
-  color: #FFFBF0;
-  border-left-color: #30DFF3;
-  background-color: #4B5CC4;
-}
 
 ruby {
   background-color: rgba(67, 193, 105, 0.5);
@@ -158,4 +48,24 @@ figcaption {
 img {
   margin: 0 auto;
   display: block;
+}
+
+
+.prettyprint {
+  background: #eef1f5;
+  border-left: 0.3rem solid #1abc9c !important;
+  font-family: Consolas, Menlo, Courier, monospace;
+}
+
+.prettyprint pre p {
+  min-height: 10px;
+}
+
+.prettyprint li {
+  background-color: #eef1f5;
+  margin-bottom: 0;
+}
+
+.prettyprint code {
+  white-space: pre-wrap !important;
 }
