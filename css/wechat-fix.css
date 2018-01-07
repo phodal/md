@@ -69,3 +69,52 @@ img {
 .prettyprint code {
   white-space: pre-wrap !important;
 }
+
+p {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+pre.prettyprint {
+  border: none;
+  border-left: 0.3rem solid #1abc9c !important;
+}
+
+figure {
+  margin: 0;
+}
+
+blockquote, dl, figure, form, ol, p, pre, table, ul {
+  margin-bottom: 16px;
+}
