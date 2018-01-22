@@ -28,25 +28,6 @@
   <link rel="stylesheet" href="css/spectrum.min.css"/>
   <link rel="stylesheet" href="css/wechat-fix.css"/>
   <script>
-    (function () {
-      var input, output;
-      var converter = new showdown.Converter({extensions: ['prettify', 'tasklist', 'footnote', 'figure', 'toc'], tables: true});
-
-      function updateOutput() {
-        output.innerHTML = converter.makeHtml(input.value);
-        PR.prettyPrint();
-      }
-
-      document.addEventListener("DOMContentLoaded", function (event) {
-        input = document.getElementById('input');
-        output = document.getElementById('output');
-
-        input.addEventListener('input', updateOutput, false);
-        input.addEventListener('keydown', updateOutput, false);
-
-        updateOutput();
-      });
-    })();
     function colorReplace(findHexColor, replaceWith) {
       // Convert rgb color strings to hex
       function rgb2hex(rgb) {
@@ -80,6 +61,36 @@
 
     window.editorColor = '#384452';
     $('document').ready(function () {
+      var input, output;
+      var converter = new showdown.Converter({extensions: ['prettify', 'tasklist', 'footnote', 'figure', 'toc'], tables: true});
+
+      function updateOutput() {
+        $('#output').html(converter.makeHtml($('textarea#input').val()))
+        PR.prettyPrint();
+      }
+
+      document.addEventListener("DOMContentLoaded", function (event) {
+        input = document.getElementById('input');
+        output = document.getElementById('output');
+
+        input.addEventListener('input', updateOutput, false);
+        input.addEventListener('keydown', updateOutput, false);
+
+        updateOutput();
+      });
+
+      var autosave = localStorage.getItem('file');
+
+      if (autosave && autosave !== 'undefined') {
+        var text = JSON.parse(autosave);
+        $("textarea#input").val(text);
+        updateOutput();
+      }
+      $("textarea#input").change (function(){
+        var file = $('textarea#input').val();
+        localStorage.setItem('file', JSON.stringify(file));
+      });
+
       new Clipboard('.btn');
       $("#colorpicker").spectrum({
         color: window.editorColor,

@@ -114,3 +114,14 @@ hr {
     background-color: #eff0f1;
     border: 0;
 }
+
+.header .sp-replacer {
+  border-color: #384452;
+  margin-left: 16px;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.header .sp-preview {
+  width: 40px;
+}
