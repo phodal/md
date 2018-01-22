@@ -130,9 +130,10 @@ code.code-in-text span {
   color: #fff;
 }
 
-.header h2 {
+.header h3 {
   padding: 0;
   line-height: 80px;
+  text-align: center;
 }
 
 textarea#input {
