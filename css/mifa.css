@@ -542,6 +542,10 @@ ul {
   list-style: circle inside;
 }
 
+ul li {
+  color: #384452;
+}
+
 .button,
 button,
 dd,
@@ -593,16 +597,6 @@ th {
   border-bottom: 0.1rem solid #d1d8df;
   padding: 1.2rem 1.5rem;
   text-align: left;
-}
-
-td:first-child,
-th:first-child {
-  padding-left: 0;
-}
-
-td:last-child,
-th:last-child {
-  padding-right: 0;
 }
 
 u {
