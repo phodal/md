@@ -118,3 +118,9 @@ figure {
 blockquote, dl, figure, form, ol, p, pre, table, ul {
   margin-bottom: 16px;
 }
+
+ol li,
+ul li,
+li p {
+  color: #384452;
+}
