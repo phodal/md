@@ -173,3 +173,35 @@ hr {
   outline: 0;
   background-image: none;
 }
+
+
+.octocat {
+  border: 0;
+  color: #f4f5f6;
+  fill: #5e6772;
+  height: 5.2rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 5.2rem;
+  z-index: 1
+}
+
+.octocat:hover .octocat-arm {
+  animation: b .56s infinite;
+  transform-origin: 13rem 10.6rem
+}
+
+.octocat .octocat-arm, .octocat .octocat-body {
+  fill: #f4f5f6
+}
+
+@keyframes b {
+  0%, 50% {
+    transform: rotate(0)
+  }
+  25%, 75% {
+    transform: rotate(-25deg)
+  }
+}
+
