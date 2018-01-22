@@ -78,13 +78,14 @@
 
       var autosave = localStorage.getItem('md.content');
 
+      var $textarea = $("textarea#input");
       if (autosave && autosave !== 'undefined') {
         var text = JSON.parse(autosave);
-        $("textarea#input").val(text);
+        $textarea.val(text);
         updateOutput();
       }
-      $("textarea#input").change (function(){
-        var file = $('textarea#input').val();
+      $textarea.change (function(){
+        var file = $textarea.val();
         localStorage.setItem('md.content', JSON.stringify(file));
       });
 
@@ -99,18 +100,6 @@
         maxSelectionSize: 10,
         preferredFormat: "hex",
         localStorageKey: "md.color",
-        move: function (color) {
-
-        },
-        show: function () {
-
-        },
-        beforeShow: function () {
-
-        },
-        hide: function () {
-
-        },
         change: function() {
           var value = $("#colorpicker").val();
           colorReplace(window.editorColor, value);
