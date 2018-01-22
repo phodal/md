@@ -61,7 +61,7 @@
 
     window.editorColor = '#384452';
     $('document').ready(function () {
-      var input, output;
+      var input;
       var converter = new showdown.Converter({extensions: ['prettify', 'tasklist', 'footnote', 'figure', 'toc'], tables: true});
 
       function updateOutput() {
@@ -69,17 +69,14 @@
         PR.prettyPrint();
       }
 
-      document.addEventListener("DOMContentLoaded", function (event) {
-        input = document.getElementById('input');
-        output = document.getElementById('output');
+      input = document.getElementById('input');
 
-        input.addEventListener('input', updateOutput, false);
-        input.addEventListener('keydown', updateOutput, false);
+      input.addEventListener('input', updateOutput, false);
+      input.addEventListener('keydown', updateOutput, false);
 
-        updateOutput();
-      });
+      updateOutput();
 
-      var autosave = localStorage.getItem('file');
+      var autosave = localStorage.getItem('md.content');
 
       if (autosave && autosave !== 'undefined') {
         var text = JSON.parse(autosave);
@@ -88,7 +85,7 @@
       }
       $("textarea#input").change (function(){
         var file = $('textarea#input').val();
-        localStorage.setItem('file', JSON.stringify(file));
+        localStorage.setItem('md.content', JSON.stringify(file));
       });
 
       new Clipboard('.btn');
@@ -101,7 +98,7 @@
         showSelectionPalette: true,
         maxSelectionSize: 10,
         preferredFormat: "hex",
-        localStorageKey: "spectrum.demo",
+        localStorageKey: "md.color",
         move: function (color) {
 
         },
