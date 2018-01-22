@@ -114,7 +114,6 @@ code.code-in-text span {
 }
 
 .button {
-  background-color: #179ED6; /* Green */
   border: none;
   color: white;
   padding: 5px 30px;
@@ -128,7 +127,6 @@ code.code-in-text span {
   border-radius: 3px;
   margin-top: 15px;
   line-height: 30px;
-  background-color: #179ED6;
   color: #fff;
 }
 

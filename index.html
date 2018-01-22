@@ -74,13 +74,9 @@
         PR.prettyPrint();
       }
 
-      input = document.getElementById('input');
-
-      input.addEventListener('input', updateOutput, false);
-      input.addEventListener('keydown', updateOutput, false);
+      $('#input').on('input keydown', updateOutput);
 
       updateOutput();
-
       var autosave = localStorage.getItem('md.content');
 
       var $textarea = $("textarea#input");
@@ -101,6 +97,8 @@
         className: "full-spectrum",
         showInitial: true,
         showPalette: true,
+        chooseText: "确认",
+        cancelText: "取消",
         showSelectionPalette: true,
         maxSelectionSize: 10,
         preferredFormat: "hex",

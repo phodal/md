@@ -1,31 +1,31 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #50616D;
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #50616D;
 }
 
 a {
-    color: #1e6bb8;
-    text-decoration: none;
+  color: #1e6bb8;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 :first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 pre p {
@@ -34,85 +34,85 @@ pre p {
 
 pre ul,
 pre ol {
-    margin: 0;
-    padding-top: 12px;
-    padding-bottom: 12px;
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 pre code, pre tt {
-    display: inline;
-    max-width: initial;
-    padding: 0;
-    margin: 0;
-    overflow: initial;
-    line-height: inherit;
-    word-wrap: normal;
-    background-color: transparent;
-    border: 0;
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
 }
 
 pre code:before, pre code:after, pre tt:before, pre tt:after {
-    content: normal;
+  content: normal;
 }
 
 ul, ol {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 blockquote {
-    padding: 0 1rem;
-    margin-left: 0;
-    color: #819198;
-    border-left: 0.3rem solid #dce6f0;
+  padding: 0 1rem;
+  margin-left: 0;
+  color: #819198;
+  border-left: 0.3rem solid #dce6f0;
 }
 
 blockquote > :first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 blockquote > :last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 table {
-    display: block;
-    width: 100%;
-    overflow: auto;
-    word-break: normal;
-    word-break: keep-all;
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
 }
 
 table th {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 table th, table td {
-    padding: 0.5rem 1rem;
-    border: 1px solid #e9ebec;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e9ebec;
 }
 
 dl {
-    padding: 0;
+  padding: 0;
 }
 
 dl dt {
-    padding: 0;
-    margin-top: 1rem;
-    font-size: 1rem;
-    font-weight: bold;
+  padding: 0;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 dl dd {
-    padding: 0;
-    margin-bottom: 1rem;
+  padding: 0;
+  margin-bottom: 1rem;
 }
 
 hr {
-    height: 2px;
-    padding: 0;
-    margin: 1rem 0;
-    background-color: #eff0f1;
-    border: 0;
+  height: 2px;
+  padding: 0;
+  margin: 1rem 0;
+  background-color: #eff0f1;
+  border: 0;
 }
 
 .header .sp-replacer {
@@ -122,10 +122,54 @@ hr {
   border-radius: 3px;
 }
 
+.sp-container.sp-light,
+.sp-container .sp-palette-container,
+.header .sp-replacer:hover,
+.header .sp-replacer.sp-active {
+  border-color: #384452;
+}
+
+.header .sp-palette-container {
+  background: #eef1f5;
+}
+
 .header .sp-preview {
   width: 40px;
 }
 
 .sp-palette {
   max-width: 300px;
+}
+
+.sp-cancel {
+  font-size: 14px;
+}
+
+.sp-container.sp-light button {
+  background-color: #384452;
+  border: 0.1rem solid #384452;
+  border-radius: .4rem;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  height: 3.8rem;
+  letter-spacing: .1rem;
+  line-height: 3.8rem;
+  padding: 0 3.0rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-image: none;
+  text-shadow: none;
+}
+
+.sp-container.sp-light button:hover {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+  color: #fff;
+  outline: 0;
+  background-image: none;
 }
