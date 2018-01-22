@@ -125,3 +125,7 @@ hr {
 .header .sp-preview {
   width: 40px;
 }
+
+.sp-palette {
+  max-width: 300px;
+}
