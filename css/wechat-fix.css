@@ -71,6 +71,7 @@ img {
 }
 
 p {
+  font-size: 14px;
   margin-bottom: 15px;
   margin-top: 15px;
 }
@@ -122,5 +123,6 @@ blockquote, dl, figure, form, ol, p, pre, table, ul {
 ol li,
 ul li,
 li p {
+  font-size: 14px;
   color: #384452;
 }
