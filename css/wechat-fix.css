@@ -126,3 +126,8 @@ li p {
   font-size: 14px;
   color: #384452;
 }
+
+li p {
+  display: inline-block;
+  margin: 0;
+}
