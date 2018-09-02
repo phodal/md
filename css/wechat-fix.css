@@ -120,13 +120,6 @@ blockquote, dl, figure, form, ol, p, pre, table, ul {
   margin-bottom: 16px;
 }
 
-ol li,
-ul li,
-li p {
-  font-size: 14px;
-  color: #384452;
-}
-
 li p {
   display: inline-block;
   margin: 0;
