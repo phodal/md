@@ -121,6 +121,7 @@ blockquote, dl, figure, form, ol, p, pre, table, ul {
 }
 
 li p {
-  display: inline-block;
+  font-size: 14px;
+  color: #384452;
   margin: 0;
 }
