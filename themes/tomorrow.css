@@ -28,7 +28,7 @@ li.L8,
 li.L9 {
   padding-left: 1em;
   background-color: #ffffff;
-  list-style-type: decimal;
+  list-style-type: none;
 }
 
 @media screen {
