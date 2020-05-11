@@ -19,7 +19,7 @@
       filter: function (source) {
         source = source.replace(/<li>(.*)<\/li>/gi, function (match, pre) {
           if(pre){
-            return '<li><span style="color: #384452;">' + pre + '</span></li>';
+            return '<li style="color: #384452;">' + pre + '</li>';
           }
         });
 
