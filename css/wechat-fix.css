@@ -67,7 +67,7 @@ img {
 }
 
 .prettyprint code {
-  white-space: nowrap;
+  white-space: inherit;
 }
 
 p {
