@@ -533,11 +533,11 @@ ul ul {
 }
 
 ol {
-  list-style: decimal inside;
+  list-style: decimal;
 }
 
 ul {
-  list-style: circle inside;
+  list-style: circle;
 }
 
 li {
