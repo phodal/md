@@ -17,14 +17,14 @@
     return [{
       type:   'output',
       filter: function (source) {
-        // 为 ul 添加样式
+        // 为 ul 添加样式 - 简化样式，与微信格式一致
         source = source.replace(/<ul>/gi, function () {
-          return '<ul style="list-style-type: circle" class="list-paddingleft-1">';
+          return '<ul class="list-paddingleft-1">';
         });
 
         // 为 ol 添加样式
         source = source.replace(/<ol>/gi, function () {
-          return '<ol style="list-style-type: decimal" class="list-paddingleft-1">';
+          return '<ol class="list-paddingleft-1">';
         });
 
         // 处理 li 标签
@@ -47,17 +47,17 @@
 
           // 处理 **标题**：内容 这种格式，转换为微信编辑器期望的格式
           content = content.replace(/<strong>([^<]+)<\/strong>(：|:)([\s\S]*)/gi, function(m, title, colon, rest) {
-            return '<strong style="box-sizing: inherit; font-weight: bold; margin-top: 0px;">' +
+            return '<strong>' +
               '<span leaf="">' +
               '<span textstyle="" style="font-weight: bold">' + title + '</span>' +
-              '<span textstyle="" style="font-weight: normal">' + colon + rest + '</span>' +
+              colon + rest +
               '</span>' +
               '</strong>';
           });
 
           // 如果没有匹配上面的格式，为普通的 strong 标签添加样式
           content = content.replace(/<strong>([^<]+)<\/strong>/gi, function(m, inner) {
-            return '<strong style="box-sizing: inherit; font-weight: bold; margin-top: 0px;">' +
+            return '<strong>' +
               '<span leaf="">' +
               '<span textstyle="" style="font-weight: bold">' + inner + '</span>' +
               '</span>' +
@@ -67,8 +67,8 @@
           // 为 em 标签添加样式
           content = content.replace(/<em>/gi, '<em style="box-sizing: inherit;">');
 
-          // 返回带样式的 li
-          return '<li style="box-sizing: inherit; color: rgb(56, 68, 82); margin-bottom: 1rem; margin-top: 0px;">' + content + '</li>';
+          // 返回简洁的 li 标签，无多余样式
+          return '<li>' + content + '</li>';
         });
 
         return source;
