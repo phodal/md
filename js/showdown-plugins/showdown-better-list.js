@@ -40,10 +40,19 @@
 
           // 如果没有匹配 **标题**：内容 格式，处理普通内容
           if (processed === content) {
-            content = content.replace(/<strong>([^<]+)<\/strong>/gi, function(m, inner) {
-              return '<strong class="strong" style="' + strongStyle + '"><span leaf="">' + inner + '</span></strong>';
-            });
-            processed = '<span leaf="">' + bullet + '</span><span leaf="">' + content + '</span>';
+            // 检查是否有 strong 标签
+            if (/<strong>/.test(content)) {
+              // 把内容分成：bullet + 处理过的内容（strong 不被 span 包裹）
+              // 先处理 strong 标签
+              content = content.replace(/<strong>([^<]+)<\/strong>/gi, function(m, inner) {
+                return '<strong class="strong" style="' + strongStyle + '"><span leaf="">' + inner + '</span></strong>';
+              });
+              // bullet 单独一个 span，内容中的 strong 保持在外面
+              processed = '<span leaf="">' + bullet + '</span>' + content;
+            } else {
+              // 没有 strong 标签，整个内容放在一个 span 里
+              processed = '<span leaf="">' + bullet + content + '</span>';
+            }
           }
 
           return '<section>' + processed + '</section>';
