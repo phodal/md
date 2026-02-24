@@ -17,58 +17,58 @@
     return [{
       type:   'output',
       filter: function (source) {
-        // 为 ul 添加样式 - 简化样式，与微信格式一致
-        source = source.replace(/<ul>/gi, function () {
-          return '<ul class="list-paddingleft-1">';
-        });
+        // 样式定义
+        var ulStyle = 'list-style: circle; padding-left: 1em; margin-left: 0; color: #384452;';
+        var olStyle = 'list-style: decimal; padding-left: 1em; margin-left: 0; color: #384452;';
+        var liStyle = 'display: block; margin: 0.2em 8px; color: #384452;';
+        var strongStyle = 'color: #1abc9c; font-weight: bold; font-size: inherit;';
 
-        // 为 ol 添加样式
-        source = source.replace(/<ol>/gi, function () {
-          return '<ol class="list-paddingleft-1">';
-        });
-
-        // 处理 li 标签
-        source = source.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, function (match, content) {
-          // 移除包裹内容的 section 标签，但保留内容
-          content = content.replace(/<section[^>]*>([\s\S]*?)<\/section>/gi, function(m, inner) {
-            if (!inner.trim() || inner.trim().match(/^(<br[^>]*>|<span[^>]*><br[^>]*><\/span>|\s)*$/i)) {
-              return '';
-            }
-            return inner;
-          });
-
-          // 移除包裹内容的 p 标签，但保留内容
-          content = content.replace(/<p[^>]*>([\s\S]*?)<\/p>/gi, function(m, inner) {
-            return inner;
-          });
-
-          // 清理多余的空白和换行
+        // 处理 li 内容的函数
+        function processLiContent(content, bullet) {
+          // 移除已有的 section、p、span leaf 标签，只保留内容
+          content = content.replace(/<section[^>]*>([\s\S]*?)<\/section>/gi, '$1');
+          content = content.replace(/<p[^>]*>([\s\S]*?)<\/p>/gi, '$1');
+          content = content.replace(/<span leaf[^>]*>([\s\S]*?)<\/span>/gi, '$1');
           content = content.trim();
 
-          // 处理 **标题**：内容 这种格式，转换为微信编辑器期望的格式
-          content = content.replace(/<strong>([^<]+)<\/strong>(：|:)([\s\S]*)/gi, function(m, title, colon, rest) {
-            return '<strong>' +
-              '<span leaf="">' +
-              '<span textstyle="" style="font-weight: bold">' + title + '</span>' +
-              colon + rest +
-              '</span>' +
-              '</strong>';
+          // 处理 **标题**：内容 这种格式
+          var processed = content.replace(/<strong>([^<]+)<\/strong>(：|:)([\s\S]*)/gi, function(m, title, colon, rest) {
+            return '<span leaf="">' + bullet + '</span>' +
+              '<strong class="strong" style="' + strongStyle + '"><span leaf="">' + title + '</span></strong>' +
+              '<span leaf="">' + colon + rest.trim() + '</span>';
           });
 
-          // 如果没有匹配上面的格式，为普通的 strong 标签添加样式
-          content = content.replace(/<strong>([^<]+)<\/strong>/gi, function(m, inner) {
-            return '<strong>' +
-              '<span leaf="">' +
-              '<span textstyle="" style="font-weight: bold">' + inner + '</span>' +
-              '</span>' +
-              '</strong>';
+          // 如果没有匹配 **标题**：内容 格式，处理普通内容
+          if (processed === content) {
+            content = content.replace(/<strong>([^<]+)<\/strong>/gi, function(m, inner) {
+              return '<strong class="strong" style="' + strongStyle + '"><span leaf="">' + inner + '</span></strong>';
+            });
+            processed = '<span leaf="">' + bullet + '</span><span leaf="">' + content + '</span>';
+          }
+
+          return '<section>' + processed + '</section>';
+        }
+
+        // 处理 ul 块（包括内部的 li）
+        source = source.replace(/<ul>([\s\S]*?)<\/ul>/gi, function(match, inner) {
+          // 处理 ul 内的所有 li，使用 • 符号
+          var processedInner = inner.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, function(m, content) {
+            var finalContent = processLiContent(content, '•&nbsp;');
+            return '<li style="' + liStyle + '">' + finalContent + '</li>';
           });
+          return '<ul style="' + ulStyle + '" class="list-paddingleft-1">' + processedInner + '</ul>';
+        });
 
-          // 为 em 标签添加样式
-          content = content.replace(/<em>/gi, '<em style="box-sizing: inherit;">');
-
-          // 返回简洁的 li 标签，无多余样式
-          return '<li>' + content + '</li>';
+        // 处理 ol 块（包括内部的 li）
+        source = source.replace(/<ol>([\s\S]*?)<\/ol>/gi, function(match, inner) {
+          var counter = 0;
+          // 处理 ol 内的所有 li，使用数字
+          var processedInner = inner.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, function(m, content) {
+            counter++;
+            var finalContent = processLiContent(content, counter + '.&nbsp;');
+            return '<li style="' + liStyle + '">' + finalContent + '</li>';
+          });
+          return '<ol style="' + olStyle + '" class="list-paddingleft-2">' + processedInner + '</ol>';
         });
 
         return source;
